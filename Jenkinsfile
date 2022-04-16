@@ -1,8 +1,6 @@
 //DECLARATIVE 
 pipeline {
-	
 	agent any
-
 	stages {
 		stage('Build'){
 			steps {
@@ -20,7 +18,6 @@ pipeline {
 			}
 		}
 	}
-
 	post {
 		always {
 			echo 'always statement ran'
@@ -32,7 +29,6 @@ pipeline {
 			echo 'failure statement ran'
 		}
 	}
-
 }
 
 //SCRIPTED 
