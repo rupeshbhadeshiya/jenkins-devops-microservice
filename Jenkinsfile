@@ -20,6 +20,18 @@ pipeline {
 	}
 }
 
+post {
+	always {
+		echo 'always statement ran'
+	}
+	success {
+		echo 'success statement ran'
+	}
+	failure {
+		echo 'failure statement ran'
+	}
+}
+
 //SCRIPTED 
 /*
 node {
