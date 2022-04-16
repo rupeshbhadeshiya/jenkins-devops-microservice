@@ -1,6 +1,8 @@
 //DECLARATIVE 
 pipeline {
+	
 	agent any
+
 	stages {
 		stage('Build'){
 			steps {
@@ -18,18 +20,19 @@ pipeline {
 			}
 		}
 	}
-}
 
-post {
-	always {
-		echo 'always statement ran'
+	post {
+		always {
+			echo 'always statement ran'
+		}
+		success {
+			echo 'success statement ran'
+		}
+		failure {
+			echo 'failure statement ran'
+		}
 	}
-	success {
-		echo 'success statement ran'
-	}
-	failure {
-		echo 'failure statement ran'
-	}
+
 }
 
 //SCRIPTED 
