@@ -1,9 +1,17 @@
 //DECLARATIVE 
 pipeline {
 	agent any
+	environment {
+		mavenHome = tool 'myMaven'
+		PATH = "$PATH:$mavenHome/bin"
+	}
 	stages {
 		stage('Compile'){
 			steps {
+				echo "mvn --version"
+				echo "mavenHome - $mavenHome"
+				echo "PATH - $PATH"
+				
 				sh "mvn clean compile"
 			}
 		}
