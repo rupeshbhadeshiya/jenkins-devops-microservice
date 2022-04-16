@@ -1,4 +1,4 @@
-# DECLARATIVE 
+//DECLARATIVE 
 pipeline {
 	agent any
 	stages {
@@ -20,7 +20,7 @@ pipeline {
 	}
 }
 
-# SCRIPTED 
+//SCRIPTED 
 /*
 node {
 	stage('Build') {
